@@ -1,0 +1,20 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: users7-db
+    environment:
+      POSTGRES_DB: users7
+      POSTGRES_USER: users7
+      POSTGRES_PASSWORD: users7_password
+    ports:
+      - "5437:5432"
+    volumes:
+      - users7_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U users7 -d users7"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  users7_pgdata:
