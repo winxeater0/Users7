@@ -170,17 +170,3 @@ Campos de ordenação aceitos:
 ```bash
 dotnet test
 ```
-
-Os testes cobrem validações de requisição, criação, atualização, exclusão, paginação e conflito por e-mail duplicado.
-
-## Requisitos atendidos
-
-- CRUD de usuários.
-- Validação dos parâmetros de entrada.
-- E-mail único no banco.
-- Data de nascimento não futura.
-- Datas de criação e edição gerenciadas pela API.
-- Swagger para documentação.
-- Testes unitários dos serviços.
-- PostgreSQL provisionado via Docker Compose.
-- Paginação em `GET /users` como bônus.
